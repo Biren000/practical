@@ -1,0 +1,734 @@
+@import url("https://fonts.googleapis.com/css2?family=Sintony&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main: #ffc700;
+  --black: #000000;
+  --white: #ffffff;
+  --gray: #aeb7c1;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+p {
+  font-family: "Sintony", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+/*================================
+ Common css start  
+======================*/
+.para {
+  font-size: 15px;
+  line-height: 24px;
+  font-family: "Sintony", sans-serif;
+  margin-bottom: 20px;
+}
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+.btn_black {
+  background: #000000;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 24px;
+  letter-spacing: 3.08px;
+}
+
+.btn_yellow {
+  background: var(--main);
+  padding: 10px 30px;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 24px;
+  letter-spacing: 3.08px;
+}
+
+.head3 {
+  font-size: 48px;
+  line-height: 56px;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+
+.head3 span {
+  color: var(--main);
+}
+
+.head4 {
+  font-size: 34px;
+  line-height: 51px;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+.head4 span {
+  color: var(--main);
+}
+.yellow_icon {
+  color: var(--main);
+}
+
+@media (max-width: 1000px) {
+  .head3 {
+    font-size: 38px;
+    line-height: 46px;
+  }
+  .para {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+
+/*================================
+ Common css end  
+======================*/
+
+/*================================
+ header css start  
+======================*/
+header {
+  display: flex;
+  background-color: var(--white);
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px;
+  position: relative;
+}
+.logo {
+  font-size: 34px;
+  line-height: 51px;
+  color: var(--black);
+}
+ul {
+  display: inline-flex;
+  gap: 50px;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: var(--black);
+  font-size: 13px;
+  line-height: 16px;
+}
+.menu {
+  color: var(--black);
+  font-size: 25px;
+  display: none;
+}
+.close {
+  color: var(--black);
+  font-size: 25px;
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  .active {
+    left: 0;
+    opacity: 1;
+  }
+  header ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    left: -100%;
+    top: 0;
+    gap: 10px;
+    background: var(--white);
+    text-align: center;
+    transition: all 0.8s ease;
+  }
+  header ul li {
+    padding: 10px 0px;
+  }
+  .menu {
+    display: block;
+  }
+  .close {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px 8%;
+  }
+}
+/*================================
+ header css end  
+======================*/
+
+/*================================
+ hero section css start  
+======================*/
+.slider_content {
+  background-color: var(--main);
+  display: flex;
+}
+.slider_left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider_left_content {
+  padding: 15%;
+}
+.slider_left_content h1 {
+  font-size: 60px;
+  line-height: 60px;
+  margin-bottom: 30px;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  background: var(--white);
+  border-radius: 50%;
+  position: relative;
+  font-size: 25px;
+  color: var(--black);
+  font-weight: 900;
+}
+.swiper-button-next:after {
+  padding: 30px 45px 30px 20px;
+  left: 25px;
+}
+.swiper-button-prev:after {
+  padding: 30px 20px 30px 45px;
+  right: 25px;
+}
+/*================================
+ hero section css end  
+======================*/
+
+/*================================
+ technology section css start  
+======================*/
+.technology_section {
+  padding: 100px 185px;
+}
+.tech_content_area {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+.tech_content_area .head3 {
+  text-align: end;
+}
+.technology_card {
+  background: #000;
+  padding: 40px 40px 50px 90px;
+}
+.right_technology_card {
+  padding: 40px 90px 40px 50px !important;
+}
+.left_technology,
+.right_technology {
+  display: grid;
+  gap: 70px;
+}
+.technology_icon {
+  background: var(--main);
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  left: 120px;
+}
+.technology_card .right_icon {
+  right: 120px;
+  left: unset;
+}
+.technology_icon img {
+  width: 100%;
+  height: 100%;
+  padding: 35px;
+}
+.technology_card > .head4,
+.para {
+  color: var(--white);
+}
+/*================================
+ technology section css end  
+======================*/
+
+/*================================
+ project section css start  
+======================*/
+.projects_section {
+  padding: 140px 185px 100px;
+}
+.project_area {
+  position: relative;
+}
+.project_top {
+  position: absolute;
+  width: 45%;
+  color: var(--black);
+  top: -140px;
+}
+.project_top .head4 {
+  font-family: "Sintony";
+}
+.project_area .line {
+  width: 100px;
+  background: var(--main);
+  border: 3px solid #ffc700;
+  margin: 35px 0;
+}
+.project_top .para {
+  color: var(--black);
+  margin-top: 28px;
+}
+.project_bottom {
+  display: flex;
+  gap: 25px;
+  align-items: flex-end;
+  text-align: end;
+  justify-content: flex-end;
+}
+.right_project_img {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+/*================================
+ project section css end  
+======================*/
+
+/*================================
+ about section css start  
+======================*/
+.about_section {
+  padding: 100px 185px;
+}
+.g-10 {
+  --bs-gutter-x: 10rem !important;
+}
+.about_section .bulllet_list {
+  flex-direction: column;
+  gap: 3px;
+}
+.about_section .bulllet_list li {
+  font-size: 15px;
+  line-height: 34px;
+  font-family: "Sintony";
+}
+
+/*================================
+ about section css end  
+======================*/
+
+/*================================
+ Counter section css start  
+======================*/
+.counter_section {
+  background: var(--black);
+  padding: 100px 0;
+}
+.counter_section h2 {
+  font-family: "Sintony";
+  color: var(--main);
+  font-size: 80px;
+  line-height: 96px;
+  margin-bottom: 20px;
+}
+.counter_section div {
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--white);
+}
+
+@media (max-width: 767px) {
+  .counter_section div {
+    margin-bottom: 20px;
+  }
+}
+
+/*================================
+ Counter section css end  
+======================*/
+
+/*================================
+ blog section css end  
+======================*/
+.blog_section {
+  padding: 100px 185px;
+}
+.blog_area {
+  display: flex;
+  gap: 25px;
+}
+.left_blog,
+.right_blog {
+  width: 100%;
+}
+.right_blog {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.blog_heading {
+  margin-bottom: 40px;
+}
+.big_blog_img {
+  margin-bottom: 30px;
+}
+.blog_small {
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #aeb7c1;
+  margin-bottom: 15px;
+}
+.small_blog_data {
+  display: flex;
+  gap: 20px;
+}
+.big_blog_head {
+  font-size: 34px;
+  line-height: 51px;
+  margin-bottom: 20px;
+}
+.blog_area .para {
+  color: var(--black);
+}
+
+.right_blog .small_blog_head {
+  font-size: 24px;
+  line-height: 32px;
+}
+.read_more {
+  color: var(--main);
+}
+.read_more img {
+  padding-left: 20px;
+}
+/*================================
+ blog section css end  
+======================*/
+
+/*================================
+ behind section css start  
+======================*/
+.behind_section {
+  padding: 0 185px 100px;
+}
+.behind_body {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 50px;
+  gap: 30px;
+}
+.behind_right {
+  display: flex;
+  align-items: flex-end;
+  gap: 25px;
+}
+.behind_head {
+  font-size: 28px;
+  line-height: 36px;
+}
+.behind_small {
+  font-family: "Sintony";
+  font-size: 13px;
+  line-height: 17px;
+  padding: 20px 0;
+}
+.behind_icon {
+  padding-bottom: 50px;
+  display: flex;
+  gap: 10px;
+}
+.behind_left .para {
+  color: var(--black);
+}
+.behind_arrow_icon {
+  justify-content: flex-end;
+  display: flex;
+  gap: 10px;
+}
+.behind_arrow_icon {
+  color: #aeb7c1;
+  padding: 5px 0;
+  font-size: 20px;
+}
+/*================================
+ behind section css end  
+======================*/
+
+/*================================
+ testimonial section css start  
+======================*/
+.testimonial_area {
+  background: var(--main);
+  padding: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.testimonial_content {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* flex-direction: column; */
+  text-align: center;
+  max-width: 550px;
+}
+.testimonial_content .para {
+  margin: 50px 0 20px 0;
+}
+.testimonial_content .name {
+  margin: 0 0 8px 0;
+}
+.testimonial_content .designation {
+  font-family: "Sintony";
+}
+/*================================
+ testimonial section css end  
+======================*/
+
+/*================================
+ company section css start  
+======================*/
+.company_flex {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 50px 0;
+  background: rgba(0, 0, 0, 0.05);
+}
+/*================================
+ company section css end  
+======================*/
+
+/*================================
+ contact section css start  
+======================*/
+.contact_section {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 100px 185px 130px;
+}
+.contact_area {
+  background: var(--white);
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+.contact_right {
+  padding: 50px;
+}
+
+.contact_left {
+  background-image: url("../images/Secondary.png");
+  height: 600px;
+  position: relative;
+  padding: 100px 50px;
+  width: 45%;
+}
+.contact_left .head3 {
+  color: var(--white);
+}
+.contact_left .para {
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--white);
+}
+.contact_right {
+  width: 55%;
+}
+.contact_right input,
+textarea {
+  font-size: 15px;
+  line-height: 24px;
+  padding: 10px;
+  border: none;
+  font-family: "Sintony", sans-serif;
+  border-bottom: 1px solid var(--black);
+  width: -webkit-fill-available;
+}
+
+@media (max-width: 1300px) {
+  .contact_section {
+    padding: 100px 150px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .contact_section {
+    padding: 100px;
+  }
+  .contact_area {
+    gap: 0px;
+  }
+}
+
+@media (max-width: 970px) {
+  .contact_section {
+    padding: 80px;
+  }
+}
+@media (max-width: 800px) {
+  .contact_area {
+    flex-direction: column;
+  }
+  .contact_left,
+  .contact_right {
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+  }
+}
+
+@media (max-width: 550px) {
+  .contact_section {
+    padding: 80px 40px;
+  }
+  .contact_left,
+  .contact_right {
+    padding: 50px 30px;
+  }
+}
+
+@media (max-width: 450px) {
+  .contact_section {
+    padding: 50px 20px;
+  }
+}
+
+/*================================
+ contact section css end  
+======================*/
+
+/*================================
+ footer section css start  
+======================*/
+footer {
+  background: var(--black);
+  color: var(--white);
+  padding: 130px 170px;
+}
+.footer_grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 50px;
+}
+.links {
+  flex-direction: column;
+}
+.links li a {
+  color: var(--white);
+  font-family: "Sintony", sans-serif;
+  font-size: 15px;
+  line-height: 44px;
+}
+
+.grid ul {
+  display: flex;
+  gap: 0px;
+}
+.grid .link_head {
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+.grid_1 ul {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.grid_1 ul li a {
+  color: var(--white);
+  font-family: "Sintony", sans-serif;
+  font-size: 18px;
+  line-height: 23px;
+}
+.grid_1 ul li .yellow_icon {
+  color: var(--main);
+  padding-right: 10px;
+}
+.social_icon_area {
+  gap: 10px !important;
+}
+.grid .social_icon {
+  border: 1px solid var(--white);
+  width: 40px;
+  height: 40px;
+  padding: 30%;
+  border-radius: 50%;
+}
+
+.grid .social_icon:hover {
+  border: 1px solid var(--main);
+  background: var(--main);
+  color: var(--white);
+}
+
+@media (max-width: 1400px) {
+  footer {
+    padding: 100px 120px;
+  }
+  .footer_grid {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1100px) {
+  footer {
+    padding: 100px 80px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .footer_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 700px) {
+  .grid_1 {
+    grid-area: 1/1/2/3;
+  }
+  .grid_4 {
+    grid-area: 3/1/4/3;
+  }
+  .grid_1 ul li a {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 550px) {
+  footer {
+    padding: 80px 40px;
+  }
+  .footer_grid {
+    gap: 30px 0px;
+  }
+}
+
+@media (max-width: 450px) {
+  footer {
+    padding: 50px 20px;
+  }
+}
+/*================================
+ footer section css end  
+======================*/
